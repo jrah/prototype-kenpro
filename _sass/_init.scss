@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+// base variable
+
+$orange:  #ff6300;
+$gold:  #ffb700;
+$yellow:  #ffd700;
+$red: #E7040F;
+$green: #19A974;
+
+$primary: $red !default;
+$warning: $gold !default;
+$negative: $red !default;
+$positive: $green !default;
+
+$breakpoint-not-small: 'screen and (min-width: 35.5em)';
+$breakpoint-medium: 'screen and (min-width: 48em)';
+$breakpoint-large: 'screen and (min-width: 78em)';
+
+$mqs: (
+  sm: 35.5em,
+  md: 48em,
+  lg: 64em,
+) !default;
+
+@mixin mq($mq) {
+  @media screen and (min-width: #{map-get($mqs, $mq)}) {
+    @content;
+  }
+}

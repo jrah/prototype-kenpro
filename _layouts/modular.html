@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+  {% for item in site.partials %}
+    {% if item.type == cover %}
+
+      {% if item.title %}
+        {{item.title}}
+      {% endif %}
+
+    {{item.content}}
+
+    {% elsif item.type == part %}
+
+    <div class="flex flex-column">
+      {% if item.title %}
+        {{item.title}}
+      {% endif %}
+    </div>
+    {% else %}
+
+      {% if item.title %}
+        {{item.title}}
+      {% endif %}
+
+    {{item.content}}
+
+    {% endif %}
+  {% endfor %}
