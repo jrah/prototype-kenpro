@@ -1,0 +1,17 @@
+%overlay {
+  position: absolute;
+  min-width: 100%;
+  padding: 0;
+  top: 0;
+  left: 0;
+  margin: 0;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+.overlay {
+  &--white {
+    @extend %overlay;
+    background-color: rgba($white, 0.59);
+  }
+}

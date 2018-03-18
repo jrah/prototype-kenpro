@@ -77,6 +77,9 @@ $primary: $purple;
 
 
 @import "base/elements";
+@import "base/overlay";
+@import "base/transistion";
+@import "partials/header";
 
 
 .bg-primary  { background-color: $primary }

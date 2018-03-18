@@ -24,7 +24,18 @@ $mqs: (
 ) !default;
 
 @mixin mq($mq) {
-  @media screen and (min-width: #{map-get($mqs, $mq)}) {
-    @content;
+  @if $mq == ns {
+    @media screen and (min-width: #{map-get($mqs, sm)}) {
+      @content;
+    }
+    @if $mq == m {
+      @media screen and (min-width: #{map-get($mqs, sm)}) and (max-width: #{map-get($mqs, lg)}) {
+        @content;
+      }
+    } @else {
+      @media screen and (min-width: #{map-get($mqs, lg)}) {
+        @content;
+      }
+    }
   }
 }

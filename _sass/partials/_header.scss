@@ -1,0 +1,58 @@
+%toggle {
+  cursor: pointer;
+  user-select: none;
+  z-index: 2;
+}
+
+.navMenu {
+      transform: translateY(-100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      // transition: transform cubic-bezier(.2,1,.3,1) .4s;
+  @include mq(md) {
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0;
+    background-color: inherit;
+    margin: 0;
+    height: inherit;
+    transform: inherit;
+
+  }
+
+  &-isOpen {
+    // make toggle icon #fff when clicked
+    & + .navMenu-toggle {
+      color: $white;
+    }
+    padding: 0;
+    top: 0;
+    left: 0;
+    background: linear-gradient(to right, #3a7bd5, #3a6073);
+    // background-color: rgba($black, .8);
+    margin: 0;
+    height: 100vh;
+    overflow-y: scroll;
+    transform: translateY(0);
+
+  }
+
+
+  &__item {
+    margin: .5rem;
+  }
+
+&-toggle {
+    @extend %toggle;
+    @include mq(md) {
+      display: none;
+    }
+  }
+}
