@@ -35,7 +35,7 @@
     padding: 0;
     top: 0;
     left: 0;
-    background: linear-gradient(to right, #3a7bd5, #3a6073);
+    background: linear-gradient(205deg, rgba($primary, .9), rgba(darken($primary, 50%), .3));
     // background-color: rgba($black, .8);
     margin: 0;
     height: 100vh;
