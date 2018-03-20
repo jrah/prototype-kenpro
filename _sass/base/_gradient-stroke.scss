@@ -1,0 +1,20 @@
+$cl: transparentize($primary, .1);
+
+
+.gradient-stroke {
+  text-align: center;
+  padding-bottom: 3px;
+  background:
+    linear-gradient(
+      to right,
+      $cl 0%,
+      lighten($cl,25%) 50%,
+      lighten($cl,30%) 100%,
+      lighten($cl,60%) 100%
+    )
+    left
+    bottom
+    transparent
+    no-repeat;
+  background-size:100% 1px;
+}
