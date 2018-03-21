@@ -28,14 +28,13 @@ $mqs: (
     @media screen and (min-width: #{map-get($mqs, sm)}) {
       @content;
     }
-    @if $mq == m {
+  } @if $mq == m {
       @media screen and (min-width: #{map-get($mqs, sm)}) and (max-width: #{map-get($mqs, lg)}) {
         @content;
       }
-    } @else {
+    } @if $mq == l {
       @media screen and (min-width: #{map-get($mqs, lg)}) {
         @content;
       }
     }
-  }
 }
