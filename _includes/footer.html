@@ -24,6 +24,19 @@
         <img src="{{ "/assets/images/react.svg" | relative_url }}" alt="" height="50" width="50">
     </div>
   </div>
-  <span class="db pv3">&copy; 2016 GDPR </span>
+  <div class="flex justify-between items-center">
+    <span class="db pv3">&copy; 2016 GDPR </span>
+    <ul class="list pa0 ma0">
+      {% for page in site.pages %}
+      {% if page.layout == 'page' %}
+      <!-- relative_url -->
+      {% assign href = page.url | remove: "/" | prepend: "#" %}
+          <li class="navMenu-item dib mh1">
+            <a class="dark-gray no-underline" href="{{ href }}">{{ page.title | escape }}</a>
+          </li>
+          {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 
 </footer>
