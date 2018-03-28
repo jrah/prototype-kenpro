@@ -5,6 +5,16 @@
 }
 
 .navMenu {
+  @include mq(ns) {
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    padding: 0;
+    background-color: inherit;
+    margin: 0;
+    height: inherit;
+    transform: none;
+  }
   transform: translateY(-100%);
   display: flex;
   flex-direction: column;
@@ -14,17 +24,7 @@
   top: 0;
   left: 0;
   right: 0;
-  // transition: transform cubic-bezier(.2,1,.3,1) .4s;
-  @include mq(md) {
-    flex-direction: row;
-    justify-content: flex-end;
-    position: relative;
-    padding: 0;
-    background-color: inherit;
-    margin: 0;
-    height: inherit;
-    transform: inherit;
-  }
+  transition: transform 300ms;
 
   &-isOpen {
     // make toggle icon #fff when clicked
@@ -41,9 +41,21 @@
     transform: translateY(0);
   }
 
+  &-item {
+    &-top {
+      @include mq(ns) {
+        font-size: $font-size-5;
+        display: inline-block;
+        margin: 0 1rem;
+      }
+      font-size: $font-size-3;
+      margin: 1rem 0;
+    }
+  }
+
   &-toggle {
     @extend %toggle;
-    @include mq(md) {
+    @include mq(ns) {
       display: none;
     }
   }
