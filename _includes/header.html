@@ -1,7 +1,8 @@
 <header>
-  <div class="flex justify-between items-center absolute w-100 ph4 z-4">
-    <a href="/" class="ttu no-underline f2 fw8 tc db pv3 white">HCS</a>
-    <div class="flex justify-between">
+  <div class="flex justify-between items-center absolute w-100 ph4 pv3 z-4">
+    <a href="/">
+      <img src="{{ "/assets/images/react.svg" | relative_url }}" alt="React" height="48" width="48"/>      
+    </a>
       <nav class="navMenu list pt4 ma0 mh2 pa0-ns">
         <ul class="list pa0 ma0 flex flex-column flex-row-ns justify-between-ns items-center">
           {% for page in site.pages %}
@@ -16,7 +17,6 @@
         </ul>
       </nav>
       <span class="navMenu-toggle" id="nav-trigger"><img src="{{ "/assets/images/hamburger.svg" | relative_url }}" width="24px" height="24px"  class="v-top" alt="Menu"><span class="clip">Menu</span></span>
-    </div>
   </div>
 
 </header>
