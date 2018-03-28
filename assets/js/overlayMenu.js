@@ -7,5 +7,7 @@ menuToggle.addEventListener('click', (e) => {
   e.preventDefault();
   header.classList.toggle('vh-100');
   menu.classList.toggle('navMenu-isOpen');
-  document.body.classList.toggle('overflow-hidden');
+  document.body.classList.toggle('position-fixed');
+  document.documentElement.classList.toggle('position-fixed');
+
 });

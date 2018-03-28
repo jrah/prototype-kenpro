@@ -2,28 +2,19 @@
   <div class="flex justify-between items-center absolute w-100 ph4 z-4">
     <a href="/" class="ttu no-underline f2 fw8 tc db pv3 white">HCS</a>
     <div class="flex justify-between">
-      <nav class="navMenu list pt4 ma0 mh2 pa0-ns ease">
-        <ul class="list pa0 ma0 ml4-ns flex flex-column items-center">
+      <nav class="navMenu list pt4 ma0 mh2 pa0-ns">
+        <ul class="list pa0 ma0 flex flex-column flex-row-ns justify-between-ns items-center">
           {% for page in site.pages %}
           {% if page.layout == 'page' %}
           <!-- relative_url -->
           {% assign href = page.url | remove: "/" | prepend: "#" %}
-              <li class="navMenu-top-item f3 mv2">
+              <li class="navMenu-item-top">
                 <a class="white no-underline" href="{{ href }}">{{ page.title | escape }}</a>
               </li>
               {% endif %}
           {% endfor %}
         </ul>
       </nav>
-      <ul class="pa0 ma0 list tc white dib mh2">
-        <li class="dib">
-          <a href="#" class="gray no-underline">KOR</a>
-        </li>
-        <span>/</span>
-        <li class="dib">
-          <a href="#" class="white no-underline">EN</a>
-        </li>
-      </ul>
       <span class="navMenu-toggle" id="nav-trigger"><img src="{{ "/assets/images/hamburger.svg" | relative_url }}" width="24px" height="24px"  class="v-top" alt="Menu"><span class="clip">Menu</span></span>
     </div>
   </div>
