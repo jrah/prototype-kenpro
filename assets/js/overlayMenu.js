@@ -9,5 +9,4 @@ menuToggle.addEventListener('click', (e) => {
   menu.classList.toggle('navMenu-isOpen');
   document.body.classList.toggle('position-fixed');
   document.documentElement.classList.toggle('position-fixed');
-
 });
