@@ -5,12 +5,17 @@
       </a>
         <nav class="navMenu list pt4 ma0 mh2 pa0-ns w-75-ns">
           <ul class="list pa0 ma0 flex flex-column flex-row-ns justify-between-ns items-center">
-            {% for page in site.pages %}
-            {% if page.layout == 'page' %}
+            {% assign pages = site.pages | sort:'order' %}
+            {% for node in pages %}
+            {% if node.layout == 'page' %}
             <!-- relative_url -->
-            {% assign href = page.url | remove: "/" | prepend: "#" %}
+            {% assign href = node.url %}
                 <li class="navMenu-item-top">
-                  <a class="white no-underline" href="{{ href }}">{{ page.title | escape }}</a>
+                  {% if node.title ==  page.title %}
+                  <a class="red no-underline" href="{{ href }}">{{ node.title | escape }}</a>
+                  {% else %}
+                  <a class="white no-underline" href="{{ href }}">{{ node.title | escape }}</a>
+                  {% endif %}
                 </li>
                 {% endif %}
             {% endfor %}
