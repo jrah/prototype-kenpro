@@ -50,15 +50,15 @@ order: 1
 
 <section>
   <div class="flex-ns">
-    <div class="w-50-ns w-100">
-      <img src="/assets/images/mariusz-prusaczyk-185176-unsplash.jpg" class="object-cover w-100 h-100-ns h5" alt="React">
-    </div>
     <div class="w-50-ns w-100" style="margin: auto;">
       <div class="pa5-l pa4">
         <h2 class="f2 lh-title fw1 ma0 mb3">Lorem ipsum dolor sit</h2>
         <p class="ma0 mb3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, ea iure odit natus provident commodi nulla sequi eveniet officiis error perferendis est voluptates. Neque, quod.</p>
-        <a href="#" class="inline-flex items-center f6 link ph4 pv3 mb2 dib white bg-blue br-pill"><span>Learn about our service</span> <svg class="ml2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 260 260" style="enable-background:new 0 0 260 260;" xml:space="preserve" transform="rotate(90 0 0)" height="20" width="20" class="mh2"><path fill="#4f8dd4" d=" M5,128.6c0,69,56,125,125,125s125-56,125-125s-56-125-125-125S5,59.5,5,128.6z M142.2,98.9l46.4,46.3c2,2,2.9,4.5,2.9,7.1  c0,2.6-1,5.1-2.9,7.1c-3.9,3.9-10.2,3.9-14.1,0L128,113.1l-46.4,46.3c-3.9,3.9-10.2,3.9-14.1,0c-3.9-3.9-3.9-10.2,0-14.1L128,84.8  L142.2,98.9z"></path></svg></a>
+        <a href="#" class="inline-flex items-center f6 link ph3 pv3 mb2 dib white bg-near-black br-pill"><span>Contact Us</span> <svg class="ml4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 260 260" style="enable-background:new 0 0 260 260;" xml:space="preserve" transform="rotate(90 0 0)" height="20" width="20" class="ml5"><path fill="#82bc00" d=" M5,128.6c0,69,56,125,125,125s125-56,125-125s-56-125-125-125S5,59.5,5,128.6z M142.2,98.9l46.4,46.3c2,2,2.9,4.5,2.9,7.1  c0,2.6-1,5.1-2.9,7.1c-3.9,3.9-10.2,3.9-14.1,0L128,113.1l-46.4,46.3c-3.9,3.9-10.2,3.9-14.1,0c-3.9-3.9-3.9-10.2,0-14.1L128,84.8  L142.2,98.9z"></path></svg></a>
       </div>
+    </div>
+    <div class="w-50-ns w-100">
+      <img src="/assets/images/mariusz-prusaczyk-185176-unsplash.jpg" class="object-cover w-100 h-100-ns h5" alt="React">
     </div>
   </div>
 </section>
