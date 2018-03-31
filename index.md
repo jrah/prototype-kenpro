@@ -24,23 +24,23 @@ order: 1
 
 <section class="bg-near-black pv5">
   <h2 class="f2 lh-title fw1 ma0 mb3 tc white">Sectors</h2>
-    <ul class="list ma0 pa0 flex-ns tc white mh4">
-      <li class="pa3">
+    <ul class="list ma0 pa0 flex-ns flex-wrap tc white mh4">
+      <li class="pa3 w-25-l w-50-m w-100">
         <img src="/assets/images/energy.svg" alt="React" class="object-fit w-100" height="48" width="48"/>
         <h2>Energy</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.!</p>
       </li>
-      <li class="pa3">
+      <li class="pa3 w-25-l w-50-m w-100">
         <img src="/assets/images/infrastructure.svg" alt="React" class="object-fit w-100" height="48" width="48"/>
         <h2>Infrastructure</h2>
         <p>Maxime ea sapiente vero. Minus hic voluptas nemo illum eaque.</p>
       </li>
-      <li class="pa3">
+      <li class="pa3 w-25-l w-50-m w-100">
         <img src="/assets/images/fund.svg" alt="React" class="object-fit w-100" height="48" width="48"/>
         <h2>Fund</h2>
         <p>Quisquam consequatur veritatis rerum quae asperiores quis enim harum autem.</p>
       </li>
-      <li class="pa3">
+      <li class="pa3 w-25-l w-50-m w-100">
         <img src="/assets/images/trading.svg" alt="React" class="object-fit w-100" height="48" width="48"/>
         <h2>Trading</h2>
         <p>Quisquam consequatur veritatis rerum quae asperiores quis enim harum aute.</p>
