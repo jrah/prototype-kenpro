@@ -1,6 +1,6 @@
 <footer class="mh4 pt4">
   <div class="flex items-center">
-    <div class="flex mv2 w-100">
+    <div class="flex mv2 w-80">
       <div class="w-50">
         <address class="fs-normal">
         <span class="fw8">Hamburg</span><br>
@@ -20,20 +20,22 @@
         </address>
       </div>
     </div>
+    <div class="w-20">
+      <ul class="list pa0 ma0">
+        {% for page in site.pages %}
+        {% if page.layout == 'page' %}
+        <!-- relative_url -->
+        {% assign href = page.url | remove: "/" | prepend: "#" %}
+            <li class="navMenu-item db mv1">
+              <a class="dark-gray no-underline" href="{{ href }}">{{ page.title | escape }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
   </div>
   <div class="flex justify-between items-center">
     <span class="db pv3">&copy; 2016 GDPR </span>
-    <ul class="list pa0 ma0">
-      {% for page in site.pages %}
-      {% if page.layout == 'page' %}
-      <!-- relative_url -->
-      {% assign href = page.url | remove: "/" | prepend: "#" %}
-          <li class="navMenu-item dib mh1">
-            <a class="dark-gray no-underline" href="{{ href }}">{{ page.title | escape }}</a>
-          </li>
-          {% endif %}
-      {% endfor %}
-    </ul>
   </div>
 
 </footer>
