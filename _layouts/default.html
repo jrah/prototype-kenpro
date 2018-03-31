@@ -7,16 +7,17 @@
   <div class="site-canvas">
     {% include header.html %}
     <main aria-label="Content">
-
-      <header class="overflow-hidden relative pv5 vh-100 flex items-center justify-center cover"  style="background-image: url('{{ "/assets/images/For_Wes.jpg" | relative_url }}')">
+      <header class="overflow-hidden relative pv5 vh-100 flex items-center justify-center cover"  style="background-image: url('{{ "/assets/images/ant-rozetsky-272965-unsplash.jpg" | relative_url }}')">
         <div class="z-4 tc relative mh6-ns mh3 pv3 white">
-          <h1 class="f1-ns f2 fw8 ma0 mb3">lorem ipsum, quia dolor sit amet consectetur
-adipisci[ng] velit, sed quia non-numquam</h1>
+          {% if page.header_title %}
+          <h1 class="f3 f1-m f-headline-l">{{page.header_title}}</h1>
+          {% else %}
+          <h1 class="f1-ns f3-m f3 fw8 ma0 mb3">No page header title</h1>
+          {% endif %}
         </div>
 
         <div class="overlay absolute db top-0 left-0 bottom-0 right-0 z-1"></div>
       </header>
-
           <article>
 
             {{page.content | markdownify }}
