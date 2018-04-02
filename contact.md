@@ -11,9 +11,9 @@ order: 3
 
 <section class="pv3">
   <div class="flex-ns">
-    <div class="w-50-ns w-100" style="margin: auto;">
+    <div class="w-50-ns w-100">
       <div class="">
-        <div id="map1" class="h5 w-100"></div>
+        <div id="map1" class="w-100" style="height: 20rem;"></div>
       </div>
     </div>
     <div class="w-50-ns w-100 pa3 flex items-center">
@@ -29,9 +29,9 @@ order: 3
 
 <section class="pv3">
   <div class="flex-ns">
-    <div class="w-50-ns w-100" style="margin: auto;">
+    <div class="w-50-ns w-100">
       <div class="">
-        <div id="map2" class="h5 w-100"></div>
+        <div id="map2" class="h5 w-100" style="height: 20rem;"></div>
       </div>
     </div>
     <div class="w-50-ns w-100 pa3 flex items-center">
