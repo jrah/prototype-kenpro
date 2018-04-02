@@ -12,6 +12,6 @@
 .overlay {
   &--white {
     @extend %overlay;
-    background-color: rgba($white, 0.59);
+    background-color: rgba($near-black, 0.59);
   }
 }
