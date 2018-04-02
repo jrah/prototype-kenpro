@@ -6,8 +6,10 @@ order: 3
 ---
 
 ```html
+
+<h2 class="f2 lh-title fw1 ma0 mb3 tc">Get in touch</h2>
+
 <section class="pv3">
-  <h2 class="f2 lh-title fw1 ma0 mb3 tc">Get in touch</h2>
   <div class="flex-ns">
     <div class="w-50-ns w-100" style="margin: auto;">
       <div class="">
