@@ -22,12 +22,13 @@
     </div>
     <div class="w-20">
       <ul class="list pa0 ma0">
-        {% for page in site.pages %}
-        {% if page.layout == 'page' %}
+        {% assign pages = site.pages | sort:'order' %}
+        {% for node in pages %}
+        {% if node.layout == 'page' %}
         <!-- relative_url -->
-        {% assign href = page.url | remove: "/" | prepend: "#" %}
-            <li class="navMenu-item db mv1">
-              <a class="dark-gray no-underline" href="{{ href }}">{{ page.title | escape }}</a>
+        {% assign href = node.url %}
+            <li class="db">
+              <a class="dark-gray no-underline" href="{{ href }}">{{ node.title | escape }}</a>
             </li>
             {% endif %}
         {% endfor %}
