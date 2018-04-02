@@ -1,24 +1,22 @@
 ---
-layout: default
+layout: stripped
 ---
-
-<style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
-
-<div class="container">
-  <h1>404</h1>
-
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
+<div class="flex justify-center items-center vh-100">
+  <div class="white tc z-2">
+    <h1 class="f1 f-headline-l code mb3 fw9 dib tracked-tight">404</h1>
+    <p class="tc f1-l fw1">Sorry, we can't find the page you are looking for.</p>
+    <p class="fw1 i tc mt4 mt5-l f4 f3-l">Are you looking for one of these?</p>
+    <ul class="list pa0 ma0">
+      {% for page in site.pages %}
+      {% if page.layout == 'page' %}
+      <!-- relative_url -->
+      {% assign href = page.url | remove: "/" | prepend: "#" %}
+          <li class="navMenu-item dib f5 f4-ns link black db pv2 ph3">
+            <a class="white no-underline" href="{{ href }}">{{ page.title | escape }}</a>
+          </li>
+          {% endif %}
+      {% endfor %}
+    </ul>
+  </div>
 </div>
+<div class="overlay absolute db top-0 left-0 bottom-0 right-0 z-1"></div>
