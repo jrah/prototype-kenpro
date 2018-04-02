@@ -10,8 +10,6 @@ header_title: >-
 order: 1
 ---
 
-
-```html
 <section class="pv5">
   <div class="mh4">
     <div class="mw6 center tc">
