@@ -5,8 +5,6 @@ permalink: /contact/
 order: 3
 ---
 
-```html
-
 <h2 class="f2 lh-title fw1 ma0 mb3 tc">Get in touch</h2>
 
 <section class="pv3">
