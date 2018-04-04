@@ -15,11 +15,11 @@ order: 2
   </div>
 </section>
 
-<section class="bg-near-black">
-  <h2 class="f2 lh-title fw1 ma0 mb3 tc white">Our Team</h2>
+<section class="bg-near-black pv4">
+  <h2 class="f2 lh-title fw1 ma0 mb4 tc white">Our Team</h2>
   {% for member in site.data.team %}
   <section class="flex-ns {% cycle 'white', 'bg-white' %} flex-reverse-pattern">
-    <div class="w-50-ns w-100 pa4-m pa5-l">
+    <div class="w-50-ns w-100 ph4-ns mb4-ns">
       <img src="/assets/images/{{member.image}}.jpg" class="object-cover w-100 h-100-ns h5" alt="{{member.image}}">
     </div>
     <div class="flex items-center w-50-ns w-100">
