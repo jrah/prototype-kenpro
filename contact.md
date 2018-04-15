@@ -2,7 +2,7 @@
 layout: page
 title: Contact
 permalink: /contact/
-order: 3
+order: 4
 ---
 
 <h2 class="f2 lh-title fw1 ma0 mb3 tc">Get in touch</h2>
