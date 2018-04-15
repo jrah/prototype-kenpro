@@ -28,9 +28,12 @@ header_title: >-
     <div class="flex items-center w-50-ns w-100">
       <div class="pa4 pa5-l">
         <h3 class="fw4 mb1 f2 lh-title ma0">{{member.name}}</h3>
+        <span class="db">{{member.role}} - {{member.location}}</span>
         <a href="#" class="fw8 green">{{member.email}}</a>
-        <p>{{member.paragraph}}</p>
+        <p>{{member.paragraph | replace: "@", '<p class="mt0 mb2">' | replace: "+", '</p>'}}</p>
+        {% if member.linkedin %}
         <a href="#"><img src="{{ "/assets/images/linkedin.svg" | relative_url }}" alt="LinkedIn" height="24px" width="24px"></a>
+        {% endif %}
       </div>
     </div>
   </section>
