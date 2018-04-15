@@ -1,6 +1,6 @@
-<footer class="mh4 pt4">
+<footer class="mwc ph4 pt4 center">
   <div class="flex-ns items-center">
-    <div class="flex mv2 w-80-ns">
+    <div class="flex mv3 w-90-ns">
       <div class="w-50">
         <address class="fs-normal">
         <span class="fw8">UK Office:</span><br>
@@ -19,14 +19,14 @@
         </address>
       </div>
     </div>
-    <div class="w-20-ns">
+    <div class="w-10-ns">
       <ul class="list pa0 ma0">
         {% assign pages = site.pages | sort:'order' %}
         {% for node in pages %}
         {% if node.layout == 'page' %}
         <!-- relative_url -->
         {% assign href = node.url %}
-            <li class="db-ns dib mr3 ma0-ns">
+            <li class="db-ns dib mr1 ma0-ns">
               <a class="dark-gray no-underline" href="{{ href }}">{{ node.title | escape }}</a>
             </li>
             {% endif %}

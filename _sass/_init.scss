@@ -13,28 +13,65 @@ $warning: $gold !default;
 $negative: $red !default;
 $positive: $green !default;
 
-$breakpoint-not-small: 'screen and (min-width: 35.5em)';
-$breakpoint-medium: 'screen and (min-width: 48em)';
-$breakpoint-large: 'screen and (min-width: 78em)';
-
 $mqs: (
-  sm: 35.5em,
-  md: 48em,
-  lg: 64em,
+  ns: 50em,
+  l: 75em,
 ) !default;
+
+$breakpoint-not-small: "screen and (min-width: 50em)";
+$breakpoint-medium: "screen and (min-width: 50em) and (max-width: 75em)";
+$breakpoint-large: "screen and (min-width: 75em)";
 
 @mixin mq($mq) {
   @if $mq == ns {
-    @media screen and (min-width: #{map-get($mqs, sm)}) {
+    @media screen and (min-width: #{map-get($mqs, ns)}) {
       @content;
     }
   } @if $mq == m {
-      @media screen and (min-width: #{map-get($mqs, sm)}) and (max-width: #{map-get($mqs, lg)}) {
+      @media screen and (min-width: #{map-get($mqs, ns)}) and (max-width: #{map-get($mqs, l)}) {
         @content;
       }
     } @if $mq == l {
-      @media screen and (min-width: #{map-get($mqs, lg)}) {
+      @media screen and (min-width: #{map-get($mqs, l)}) {
         @content;
       }
     }
+}
+
+@mixin center($argument: auto) {
+  margin-left: $argument;
+  margin-right: $argument;
+}
+
+.mwc {
+  margin-left: auto;
+  margin-right: auto;
+  max-width:  100%;
+}
+
+@each $size, $width in $mqs {
+
+  .mwc {
+    @if $size == ns {
+      @media screen and (min-width: #{map-get($mqs, ns)}) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width:  55em;
+      }
+    }
+
+    @if $size == l {
+      @media screen and (min-width: #{map-get($mqs, l)}) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width:  80em;
+      }
+    } @else {
+      @media screen and (min-width: #{map-get($mqs, ns)}) and (max-width: #{map-get($mqs, l)}) {
+        margin-left: auto;
+        margin-right: auto;
+        max-width:  65em;
+      }
+    }
+  }
 }
