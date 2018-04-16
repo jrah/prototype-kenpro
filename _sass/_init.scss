@@ -64,7 +64,7 @@ $breakpoint-large: "screen and (min-width: 75em)";
       @media screen and (min-width: #{map-get($mqs, l)}) {
         margin-left: auto;
         margin-right: auto;
-        max-width:  80em;
+        max-width:  72em;
       }
     } @else {
       @media screen and (min-width: #{map-get($mqs, ns)}) and (max-width: #{map-get($mqs, l)}) {
