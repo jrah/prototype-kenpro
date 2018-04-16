@@ -24,7 +24,9 @@ header_title: >-
     <div class="{% cycle 'bg-near-black white', 'bg-white' %}">
       <section class="flex-ns mwc {% cycle '', 'flex-row-reverse' %} pv5-ns">
         <div class="w-50-ns w-100">
+          {% if member.image %}
           <img src="/assets/images/{{member.image}}.jpg" class="object-cover w-100 h-100-ns h5" alt="{{member.image}}">
+          {% endif %}
         </div>
         <div class="flex items-center w-50-ns w-100">
           <div class="pa4 pa5-l">
