@@ -23,10 +23,9 @@ header_title: >-
     {% capture padding %}{% if forloop.first %}ph4-ns mb4-ns{% else %}pa4{% endif %}{% endcapture %}
     <div class="{% cycle 'bg-near-black white', 'bg-white' %}">
       <section class="flex-ns mwc {% cycle '', 'flex-row-reverse' %} pv5-ns">
+        {% if member.image %}
         <div class="w-50-ns w-100">
-          {% if member.image %}
           <img src="/assets/images/{{member.image}}.jpg" class="object-cover w-100 h-100-ns h5" alt="{{member.image}}">
-          {% endif %}
         </div>
         <div class="flex items-center w-50-ns w-100">
           <div class="pa4 pa5-l">
@@ -39,6 +38,18 @@ header_title: >-
             {% endif %}
           </div>
         </div>
+            {% else %}
+
+              <div class="pa4 pa5-l">
+                <h3 class="fw4 mb1 f2 lh-title ma0">{{member.name}}</h3>
+                <span class="db">{{member.role}} - {{member.location}}</span>
+                <a href="mailto:{{member.email}}@kenprojda.com" class="fw8 green">{{member.email}}@kenprojda.com</a>
+                <p>{{member.paragraph | replace: "@", '<p class="mt0 mb2">' | replace: "+", '</p>'}}</p>
+                {% if member.linkedin %}
+                <a href="#"><img src="{{ "/assets/images/linkedin.svg" | relative_url }}" alt="LinkedIn" height="24px" width="24px"></a>
+                {% endif %}
+            </div>
+            {% endif %}
       </section>
     </div>
   {% endfor %}
