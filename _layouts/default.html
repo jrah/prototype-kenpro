@@ -7,7 +7,7 @@
   <div class="site-canvas">
     {% include header.html %}
     <main aria-label="Content">
-      {% capture vh %} {% if page.title == 'Home' %} vh-100 {% else %}  min-vh-50 {% endif %}{% endcapture %}
+      {% capture vh %} {% if page.title == 'About Us' %} vh-100 {% else %}  min-vh-50 {% endif %}{% endcapture %}
       <header class="overflow-hidden relative pv5 {{vh}} flex items-center justify-center cover" style="background-image: url('{{ '/assets/images/ant-rozetsky-272965-unsplash.jpg' | relative_url }}')">
         <div class="z-4 tc relative mh6-ns mh4 pv3 white mw7">
           {% if page.header_title %}
