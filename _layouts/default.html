@@ -7,7 +7,7 @@
   <div class="site-canvas">
     {% include header.html %}
     <main aria-label="Content">
-      {% capture vh %} {% if page.title == 'About Us' %} vh-100 {% else %}  min-vh-50 {% endif %}{% endcapture %}
+      {% capture vh %} {% if page.url == "/" %} vh-100 {% else %}  min-vh-50 {% endif %}{% endcapture %}
       {% capture background_image %}{% if page.header_image %}assets/images/{{page.header_image}}{% else %}assets/images/joe-mcdaniel-380048-unsplash.jpg{% endif %}{% endcapture %}
       <header class="overflow-hidden relative pv5 {{vh}} flex items-center justify-center cover bg-center" style="background-image: url('{{background_image | relative_url }}')">
         <div class="z-4 tc relative mh6-ns mh4 pv3 white mw7">
