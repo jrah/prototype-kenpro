@@ -12,7 +12,7 @@
             {% assign href = node.url %}
                 <li class="navMenu-item-top">
                   {% if node.title ==  page.title %}
-                  <a class="red no-underline" href="{{ href }}">{{ node.title | escape }}</a>
+                  <a class="green no-underline" href="{{ href }}">{{ node.title | escape }}</a>
                   {% else %}
                   <a class="white no-underline" href="{{ href }}">{{ node.title | escape }}</a>
                   {% endif %}
